@@ -45,7 +45,16 @@ public partial class System_MenuNew : System.Web.UI.Page
             return;
         }
 
-        int ret = objMenu.addData(txtName.Text, txtDescribe.Text,txtLink.Text);
+        int ret = 0;
+        try
+        {
+            ret = objMenu.addData(int.Parse(ddlGroup.SelectedValue), txtName.Text, txtDescribe.Text, txtLink.Text);
+        }
+        catch (Exception ex)
+        {
+            objSystemClass.addMessage("Có lỗi xảy ra! (" + ex.Message + ")");
+            return;
+        }
 
         if (ret != 0)
         {
@@ -56,6 +65,8 @@ public partial class System_MenuNew : System.Web.UI.Page
         {
             objSystemClass.addMessage("Có lỗi xảy ra! (" + objMenu.Message + ")");
         }
+        
+        
     }
     #endregion
 }

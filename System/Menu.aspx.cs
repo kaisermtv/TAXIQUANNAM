@@ -13,6 +13,8 @@ public partial class System_Menu : System.Web.UI.Page
 
     public int index = 1;
     public int itemId = 0;
+
+    public DataRow objData;
     #endregion
 
     #region method Page_Load
@@ -28,6 +30,14 @@ public partial class System_Menu : System.Web.UI.Page
 
         if (!Page.IsPostBack)
         {
+            if (itemId != 0)
+            {
+                objData = objMenu.getData(itemId);
+                if (objData == null) Response.Redirect("Menu.aspx");
+            }
+
+
+
             ddlGroup.DataSource = objMenu.getDataToCombobox("-- Thư mục gốc --");
             ddlGroup.DataValueField = "ID";
             ddlGroup.DataTextField = "NAME";

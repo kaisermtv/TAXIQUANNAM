@@ -45,6 +45,7 @@
         <div class="AdminRightItem">
             <asp:Button ID="btnSaver" runat ="server" CssClass="btn btn-primary" Text="Ghi Nhận" OnClick="btnSaver_Click" />
             <a href="/System/Menu.aspx?id=<%= ddlGroup.SelectedValue  %>" class="btn btn-default">Thoát</a>
+            <a href="/System/MenuNew.aspx?pid=<%= ddlGroup.SelectedValue %>" class="btn btn-danger" style="float:right">Thêm mới</a>
         </div>
     </div>
 

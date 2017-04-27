@@ -76,6 +76,9 @@
     </asp:Repeater>
     <br />
     <a href="MenuNew.aspx?pid=<%= itemId %>" class="btn btn-primary">Thêm menu</a>
+    <% if(objData != null){ %>
+    <a href="Menu.aspx<%= (objData["PID"].ToString() != "")?"?pid="+objData["PID"].ToString():""  %>" class="btn btn-danger">Trở lại</a>
+    <% } %>
 
     <!-- Modal -->
     <div id="myModal" class="modal fade" role="dialog">

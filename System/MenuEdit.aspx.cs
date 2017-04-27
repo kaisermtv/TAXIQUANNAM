@@ -45,7 +45,7 @@ public partial class System_MenuEdit : System.Web.UI.Page
             ddlGroup.DataTextField = "NAME";
             ddlGroup.DataBind();
 
-            if (objData["PID"] != null)
+            if (objData["PID"].ToString() != null && objData["PID"].ToString() != "")
             {
                 ddlGroup.SelectedValue = objData["PID"].ToString();
             }
@@ -67,7 +67,7 @@ public partial class System_MenuEdit : System.Web.UI.Page
             return;
         }
 
-        int ret = objMenu.UpdateData(itemId,txtName.Text, txtDescribe.Text, txtLink.Text);
+        int ret = objMenu.UpdateData(itemId,int.Parse(ddlGroup.SelectedValue),txtName.Text, txtDescribe.Text, txtLink.Text);
 
         if (ret != 0)
         {

@@ -35,12 +35,17 @@ public class DataMenu : DataClass
     #endregion
 
     #region method addData
-    public int addData(String Name, String Describe,String link,int type = 0)
+    public int addData(int pid,String Name, String Describe, String link, int type = 0)
     {
         try
         {
             SqlCommand Cmd = this.getSQLConnect();
-            Cmd.CommandText = "INSERT INTO tblMenu(NAME,DESCRIBE,LINK,NTYPE) OUTPUT INSERTED.ID VALUES (@NAME,@DESCRIBE,@LINK,@NTYPE)";
+            Cmd.CommandText = "INSERT INTO tblMenu(" + ((pid != 0) ? "PID," : "") + "NAME,DESCRIBE,LINK,NTYPE) OUTPUT INSERTED.ID VALUES (" + ((pid != 0) ? "@PID," : "") + "@NAME,@DESCRIBE,@LINK,@NTYPE)";
+
+            if (pid != 0)
+            {
+                Cmd.Parameters.Add("PID", SqlDbType.Int).Value = pid;
+            }
 
             Cmd.Parameters.Add("NAME", SqlDbType.NVarChar).Value = Name;
             Cmd.Parameters.Add("DESCRIBE", SqlDbType.NVarChar).Value = Describe;
@@ -66,13 +71,17 @@ public class DataMenu : DataClass
     #endregion
 
     #region method UpdateData
-    public int UpdateData(int Id,String Name, String Describe, String link, int type = 0)
+    public int UpdateData(int Id,int pid ,String Name, String Describe, String link, int type = 0)
     {
         try
         {
             SqlCommand Cmd = this.getSQLConnect();
-            Cmd.CommandText = "UPDATE tblMenu SET NAME = @NAME, DESCRIBE = @DESCRIBE,LINK = @LINK, NTYPE = @NTYPE OUTPUT INSERTED.ID WHERE ID = @ID";
+            Cmd.CommandText = "UPDATE tblMenu SET " + ((pid != 0) ? "PID = @PID," : "PID = null,") + "NAME = @NAME, DESCRIBE = @DESCRIBE,LINK = @LINK, NTYPE = @NTYPE OUTPUT INSERTED.ID WHERE ID = @ID";
 
+            if (pid != 0)
+            {
+                Cmd.Parameters.Add("PID", SqlDbType.Int).Value = pid;
+            }
             Cmd.Parameters.Add("ID", SqlDbType.Int).Value = Id;
             Cmd.Parameters.Add("NAME", SqlDbType.NVarChar).Value = Name;
             Cmd.Parameters.Add("DESCRIBE", SqlDbType.NVarChar).Value = Describe;
