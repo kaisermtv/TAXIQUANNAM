@@ -142,12 +142,23 @@ public class DataMenu : DataClass
     #endregion
 
     #region method getList
-    public DataTable getList()
+    public DataTable getList(int id = 0)
     {
         try
         {
             SqlCommand Cmd = this.getSQLConnect();
-            Cmd.CommandText = "SELECT ID,NAME,LINK,IORDER FROM tblMenu ORDER BY IORDER ASC";
+            Cmd.CommandText = "SELECT ID,NAME,LINK,IORDER FROM tblMenu";
+
+            if(id ==0)
+            {
+                Cmd.CommandText += " WHERE PID IS NULL";
+            } else
+            {
+                Cmd.CommandText += " WHERE PID = @PID";
+                Cmd.Parameters.Add("PID", SqlDbType.Int).Value = id;
+            }
+
+            Cmd.CommandText += " ORDER BY IORDER ASC";
 
             DataTable ret = this.findAll(Cmd);
 
@@ -184,5 +195,34 @@ public class DataMenu : DataClass
     }
     #endregion
 
-    
+    #region Method getDataToCombobox
+    public DataTable getDataToCombobox(String kcstr = "Không chọn",int group = 0)
+    {
+        try
+        {
+            SqlCommand Cmd = this.getSQLConnect();
+            Cmd.CommandText = "SELECT ID,NAME FROM tblMenu";
+
+            if(group != 0)
+            {
+                Cmd.CommandText += " WHERE PID = @PID";
+                Cmd.Parameters.Add("PID", SqlDbType.Int).Value = group;
+            }
+
+            DataTable ret = this.findAll(Cmd);
+
+            this.SQLClose();
+
+            if (kcstr != null && kcstr != "") { ret.Rows.Add(0, kcstr); }
+
+            return ret;
+        }
+        catch (Exception ex)
+        {
+            this.Message = ex.Message;
+            this.ErrorCode = ex.HResult;
+            return null;
+        }
+    }
+    #endregion
 }

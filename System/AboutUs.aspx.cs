@@ -8,6 +8,7 @@ using System.Web.UI.WebControls;
 public partial class System_AboutUs : System.Web.UI.Page
 {
     DataSetting objSetting = new DataSetting();
+    SystemClass objSystem = new SystemClass();
 
     protected void Page_Load(object sender, EventArgs e)
     {
@@ -34,6 +35,8 @@ public partial class System_AboutUs : System.Web.UI.Page
             objSetting.setValue("Hotline", this.txtHotline.Text);
             objSetting.setValue("Greeting", this.txtGreeting.Text);
             objSetting.setValue("Greeting1", this.txtGreeting1.Text);
+
+            objSystem.addMessage("Đã cập nhật!");
         }
         
     }
