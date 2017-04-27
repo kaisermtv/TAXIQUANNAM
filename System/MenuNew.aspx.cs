@@ -12,12 +12,27 @@ public partial class System_MenuNew : System.Web.UI.Page
     private DataMenu objMenu = new DataMenu();
     private SystemClass objSystemClass = new SystemClass();
 
+    public int group = 0;
     #endregion
 
     #region method Page_Load
     protected void Page_Load(object sender, EventArgs e)
     {
-       
+        try
+        {
+            this.group = int.Parse(Request["pid"].ToString());
+        }
+        catch { }
+
+        if (!Page.IsPostBack)
+        {
+            ddlGroup.DataSource = objMenu.getDataToCombobox("-- Thư mục gốc --");
+            ddlGroup.DataValueField = "ID";
+            ddlGroup.DataTextField = "NAME";
+            ddlGroup.DataBind();
+
+            ddlGroup.SelectedValue = group.ToString();
+        }
     }
     #endregion
 

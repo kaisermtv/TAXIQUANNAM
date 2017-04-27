@@ -26,6 +26,8 @@ public partial class System_MenuEdit : System.Web.UI.Page
 
         if (!Page.IsPostBack && this.itemId != 0)
         {
+            
+
             DataRow objData = objMenu.getData(this.itemId);
             if (objData == null)
             {
@@ -37,6 +39,21 @@ public partial class System_MenuEdit : System.Web.UI.Page
             txtName.Text = objData["NAME"].ToString();
             txtDescribe.Text = objData["DESCRIBE"].ToString();
             txtLink.Text = objData["LINK"].ToString();
+
+            ddlGroup.DataSource = objMenu.getDataToCombobox("-- Thư mục gốc --");
+            ddlGroup.DataValueField = "ID";
+            ddlGroup.DataTextField = "NAME";
+            ddlGroup.DataBind();
+
+            if (objData["PID"] != null)
+            {
+                ddlGroup.SelectedValue = objData["PID"].ToString();
+            }
+            else
+            {
+                ddlGroup.SelectedValue = "0";
+            }
+
         }
     }
     #endregion

@@ -75,7 +75,7 @@
         </FooterTemplate>
     </asp:Repeater>
     <br />
-    <a href="MenuNew.aspx" class="btn btn-primary">Thêm menu</a>
+    <a href="MenuNew.aspx?pid=<%= itemId %>" class="btn btn-primary">Thêm menu</a>
 
     <!-- Modal -->
     <div id="myModal" class="modal fade" role="dialog">
