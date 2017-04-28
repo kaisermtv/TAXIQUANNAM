@@ -44,14 +44,14 @@
     }
     var swiper = new Swiper('.swiper-container', {
         pagination: '.swiper-pagination',
-        slidesPerView: slidesPerView,
+        slidesPerView: 1,
         paginationClickable: true,
-        spaceBetween: 25,
+        spaceBetween: 0,
         freeMode: true,
         nextButton: '.swiper-button-next',
         prevButton: '.swiper-button-prev',
-        //loop: true,
-        autoplay: 5000
+        loop: true
+        //autoplay: 5000
     });
     var swiper2 = new Swiper('.tab-slide-m', {
         //pagination: '.swiper-pagination',
@@ -70,9 +70,9 @@
     $(window).scroll(function () {
         var scrollTop = $(window).scrollTop();
         if (scrollTop >= 100) {
-            $('#menu-wraper,.main-header .search-w').addClass('fixed');
+            $('#menu-wraper').addClass('fixed');
         } else {
-            $('#menu-wraper,.main-header .search-w').removeClass('fixed');
+            $('#menu-wraper').removeClass('fixed');
         }
     });
 });

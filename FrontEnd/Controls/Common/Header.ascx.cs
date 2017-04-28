@@ -17,8 +17,8 @@ public partial class FrontEnd_Controls_Common_Header : System.Web.UI.UserControl
             if (objData == null) objSystemClass.Logout();
             else
             {
-                userName.InnerText = objData["ACCT_NAME"].ToString();
-                logout.InnerHtml = "<a href=\"/Logout\" class='dadangnhap'>Logout</a>";
+                //userName.InnerText = objData["ACCT_NAME"].ToString();
+                //logout.InnerHtml = "<a href=\"/Logout\" class='dadangnhap'>Logout</a>";
             }
         }
     }

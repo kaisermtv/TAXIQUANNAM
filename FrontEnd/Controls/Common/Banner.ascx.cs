@@ -18,11 +18,7 @@ public partial class FrontEnd_Controls_Common_Banner : System.Web.UI.UserControl
     #region Page_PreRender
     public void Page_PreRender(object sender, EventArgs e)
     {
-        DataNews objNews = new DataNews();
-        DataTable objData = objNews.getDataTop(5,0,1,true);
-
-        dtlNews.DataSource = objData.DefaultView;
-        dtlNews.DataBind();
+        
     }
     #endregion
 }

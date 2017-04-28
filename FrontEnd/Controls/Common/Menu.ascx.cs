@@ -25,8 +25,8 @@ public partial class FrontEnd_Controls_Common_Menu : System.Web.UI.UserControl
     {
         DataTable objData = objMenu.getList();
 
-        dtlData.DataSource = objData.DefaultView;
-        dtlData.DataBind();
+        //dtlData.DataSource = objData.DefaultView;
+        //dtlData.DataBind();
 
         index = 1;
     }
