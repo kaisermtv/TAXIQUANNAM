@@ -1,3 +1,17 @@
+
+CREATE TABLE tblStatus(
+	ID			INT PRIMARY KEY NOT NULL IDENTITY(0,1),
+	NAME		NVARCHAR(256) NULL,
+	[DESCRIBE]	NTEXT NULL,
+
+	CREATEDATE		DATETIME DEFAULT(GETDATE())
+)
+
+INSERT INTO tblStatus(NAME,[DESCRIBE]) VALUES (N'-/-',N'Chờ xử lý');
+INSERT INTO tblStatus(NAME,[DESCRIBE]) VALUES (N'Kích hoạt',N'Được chia sẻ');
+INSERT INTO tblStatus(NAME,[DESCRIBE]) VALUES (N'Lưu trữ',N'Đã xóa, nhưng chưa chả khỏi sql');
+
+
 CREATE TABLE tblAcctGroup(
 	ID			INT PRIMARY KEY NOT NULL IDENTITY(0,1),
 	NAME		NVARCHAR(256) NOT NULL UNIQUE,
@@ -61,20 +75,10 @@ CREATE TABLE tblCategory(
 	NAME		NVARCHAR(256) NULL,
 	[DESCRIBE]	NTEXT NULL,
 	LINK		NVARCHAR(256),
+
+	PID			INT NULL FOREIGN KEY REFERENCES dbo.tblCategory(ID),
 	CREATEDATE		DATETIME DEFAULT(GETDATE())
 )
-
-CREATE TABLE tblStatus(
-	ID			INT PRIMARY KEY NOT NULL IDENTITY(0,1),
-	NAME		NVARCHAR(256) NULL,
-	[DESCRIBE]	NTEXT NULL,
-
-	CREATEDATE		DATETIME DEFAULT(GETDATE())
-)
-
-INSERT INTO tblStatus(NAME,[DESCRIBE]) VALUES (N'-/-',N'Chờ xử lý');
-INSERT INTO tblStatus(NAME,[DESCRIBE]) VALUES (N'Kích hoạt',N'Được chia sẻ');
-INSERT INTO tblStatus(NAME,[DESCRIBE]) VALUES (N'Lưu trữ',N'Đã xóa, nhưng chưa chả khỏi sql');
 
 CREATE TABLE tblMenu(
 	ID INT PRIMARY KEY NOT NULL IDENTITY(1,1),
@@ -85,7 +89,8 @@ CREATE TABLE tblMenu(
 	LINK NVARCHAR(512) NULL,
 
 	IORDER INT NULL,
-		
+	
+	PID INT NULL FOREIGN KEY REFERENCES dbo.tblMenu(ID),
 	CREATEDATE		DATETIME DEFAULT(GETDATE())
 );
 
@@ -108,6 +113,8 @@ CREATE TABLE tblNewsGroup(
 	NAME		NVARCHAR(256) NOT NULL UNIQUE,
 	DESCRIBE	NVARCHAR(50) NULL,
 	
+	PID INT NULL FOREIGN KEY REFERENCES dbo.tblNewsGroup(ID),
+
 	NSTATUS		INT NOT NULL DEFAULT(0) FOREIGN KEY REFERENCES dbo.tblStatus(ID),
 	EDITTIME	DATETIME NULL,
 	EDITUSER	INT NULL,
@@ -179,51 +186,3 @@ CREATE TABLE tblAnswerResult(
 	USERID	INT NULL FOREIGN KEY REFERENCES dbo.tblAccount(ACCT_ID),
 	CREATETIME	DATETIME DEFAULT(GETDATE()) -- Ngày khởi tạo
 ); 
-
-CREATE  TABLE tblFacebookPost (
-			PostPhotoId int identity(1,1)  not null primary key,
-			id char(100) ,
-			message nvarchar(max) ,
-			full_picture char(450) ,
-			picture char(450) ,
-			link char(500),
-			created_time char(30) ,
-			comments nvarchar(30),
-			likes nvarchar(10),
-			 time_sync datetime default getdate()  ,
-			 state int default 1,
-			 ) ; 
---/* SEO Optimization */
-----CREATE   PROCEDURE GetSiteMapContent
-----	-- Tạo mới procedure tạo các dữ liệu để seo---
-----AS
-----BEGIN
-
-----	SET NOCOUNT ON;
-
---SELECT TOP 100  create_time FROM tblFacebookPost ORDER BY id DESC
---SELECT id,tblFacebookPost.link  FROM tblFacebookPost ORDER BY create_time DESC
-
---END
-
-/*Tạo riêng bảng đặc biệt dành cho cuộc thi Yolo Damchiase */
-
-CREATE TABLE [dbo].[tblFacebookPhotoPost](
-	[PostPhotoId] [int] IDENTITY(1,1) NOT NULL,
-	[id] [char](100) NULL,
-	[name] [nvarchar](max) NULL,
-	[user_name] nvarchar(100),
-	[user_address] nvarchar(100),
-	[user_birthday] nvarchar(100),
-	[picture] [char](450) NULL,
-	[link] [char](500) NULL,
-	[comments] [nvarchar](30) NULL,
-	[likes] [nvarchar](10) NULL,
-	[create_time] [nvarchar](30) NULL,
-	[time_sync] [datetime] NULL DEFAULT (getdate()),
-	[state] [int] NULL DEFAULT ((1)),
-PRIMARY KEY  
-(
-	[PostPhotoId] )
-	)
-

@@ -139,7 +139,7 @@ public class DataAccount : DataClass
     #endregion
 
     #region method addAccount
-    public int addAccount(String Acct, String pass,int group = 3)
+    public int addAccount(String Acct, String pass,int group = 0)
     {
         try
         {

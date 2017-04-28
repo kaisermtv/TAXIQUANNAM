@@ -12,12 +12,27 @@ public partial class System_MenuNew : System.Web.UI.Page
     private DataMenu objMenu = new DataMenu();
     private SystemClass objSystemClass = new SystemClass();
 
+    public int group = 0;
     #endregion
 
     #region method Page_Load
     protected void Page_Load(object sender, EventArgs e)
     {
-       
+        try
+        {
+            this.group = int.Parse(Request["pid"].ToString());
+        }
+        catch { }
+
+        if (!Page.IsPostBack)
+        {
+            ddlGroup.DataSource = objMenu.getDataToCombobox("-- Thư mục gốc --");
+            ddlGroup.DataValueField = "ID";
+            ddlGroup.DataTextField = "NAME";
+            ddlGroup.DataBind();
+
+            ddlGroup.SelectedValue = group.ToString();
+        }
     }
     #endregion
 
@@ -30,7 +45,16 @@ public partial class System_MenuNew : System.Web.UI.Page
             return;
         }
 
-        int ret = objMenu.addData(txtName.Text, txtDescribe.Text,txtLink.Text);
+        int ret = 0;
+        try
+        {
+            ret = objMenu.addData(int.Parse(ddlGroup.SelectedValue), txtName.Text, txtDescribe.Text, txtLink.Text);
+        }
+        catch (Exception ex)
+        {
+            objSystemClass.addMessage("Có lỗi xảy ra! (" + ex.Message + ")");
+            return;
+        }
 
         if (ret != 0)
         {
@@ -41,6 +65,8 @@ public partial class System_MenuNew : System.Web.UI.Page
         {
             objSystemClass.addMessage("Có lỗi xảy ra! (" + objMenu.Message + ")");
         }
+        
+        
     }
     #endregion
 }
