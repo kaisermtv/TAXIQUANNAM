@@ -84,6 +84,7 @@
                             <ul class="sub-menu-list">
                                 <li><a href="/System/AboutUs.aspx">Thông tin đơn vị</a></li>
                                 <li><a href="/System/Menu.aspx">Menu</a></li>
+                                <li><a href="/System/HomeConfig.aspx">Cấu hình trang chủ</a></li>
                                 <li><a href="/System/GroupAcctList.aspx">Nhóm tài khoản</a></li>
                                 <li><a href="/System/ListAccount.aspx">Tài khoản người dùng</a></li>
                             </ul>
@@ -170,13 +171,13 @@
 
                 <div id="page-wrapper">
                     <div class="graphs">
+                        <asp:ContentPlaceHolder ID="MainContent" runat="server">
+                        </asp:ContentPlaceHolder>
                         <% foreach (String val in objSystemClass.getMessage()){ %>
-                            <div class="alert alert-success" role="alert">
+                            <div class="alert alert-success" role="alert" style="margin-top:10px">
 							        <%= val %>
 						    </div>
                         <% } %>
-                        <asp:ContentPlaceHolder ID="MainContent" runat="server">
-                        </asp:ContentPlaceHolder>
                     </div>
                 </div>
             </div>

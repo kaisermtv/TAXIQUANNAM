@@ -12,7 +12,7 @@
 
     <body>
 	    <div class="login">
-            <h1>Đăng nhập quản trị viên</h1>
+            <h1>Đăng nhập hệ thống</h1>
             <form method="post" action="/System/Login.aspx" >
     	        <% if(this.Message != ""){ %>
 	                 <div style="color:red;margin:10px 0px;">
@@ -23,7 +23,7 @@
                 <input type="password" name="password" placeholder="Mật khẩu" required="required" />
 
                 <div style="width: 100%; text-align: right">
-                    <input type="checkbox" id="remember" name="remember" <%= Remember?"checked":"" %> /><label for="remember" > Nhớ tôi</label>
+                    <input type="checkbox" id="remember" name="remember" <%= Remember?"checked":"" %> /><label for="remember" > Nhớ mật khẩu</label>
                 </div>
                 <button type="submit" class="btn btn-primary btn-block btn-large">Đăng nhập</button>
             </form>

@@ -1,6 +1,9 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="Default.aspx.cs" Inherits="_Default" %>
 
+<html>
+    <head>
+        <title></title>
 
-<asp:Content ID="Content1" ContentPlaceHolderID="MasterPageContent" runat="server">
-
-</asp:Content>
+    </head>
+    <body></body>
+</html>
