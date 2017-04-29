@@ -115,7 +115,7 @@ ul.social { display: inline-block; float: right; }
 #slide-w { background: url(../images/Front-End/slide-w.png) no-repeat scroll center center; width: 100%; display: inline-block; float: left; position: relative; }
     #slide-w h3 { font-family: Amherst; font-size: 48px; color: #fff; line-height: 100px; display: inline-block; width: 450px; }
     #slide-w .line { border-bottom: 3px solid #c2c2c2; position: absolute; top: 55px; z-index: 9; display: inline-block; width: calc(100% - 460px); right: 0; }
-    #slide-w .swiper-slide img { width: 100%; }
+    #slide-w .swiper-slide img { width: 100%; height: 100%;}
 
 
 .PhotoContestPerson { font-size: 18px; background: #fff; width: 100%; margin-bottom: 20px; display: inline-block; }
@@ -130,7 +130,7 @@ ul.social { display: inline-block; float: right; }
 .swiper-pagination-bullet { width: 12px; height: 12px; opacity: 0.8; background: #fff; }
     .swiper-pagination-bullet.swiper-pagination-bullet-active { opacity: 1; background: #007aff; }
 
-.swiper-container { padding-bottom: 40px; width: 100%; height: 510px; }
+.swiper-container { width: 100%; height: 510px; }
 .swiper-slide { font-size: 18px; background: #fff; }
     .swiper-slide .person { width: 100%; height: 70%; margin-bottom: 10px; }
         .swiper-slide .person img { /*width: 100%; height: 100%;*/ }
@@ -229,12 +229,12 @@ ul.lienhe { width: 355px; display: inline-block; }
         ul.lienhe li span { float: right; display: inline-block; }
 
 #footer { background: #bf3331; padding-top: 30px; padding-bottom: 30px; border-bottom: 1px solid #e0e0e0; float: left; width: 100%; }
-    #footer h3 { color: #fff; font-size: 17px; font-family: CondBold; margin-bottom: 20px; margin-top: 25px;}
+    #footer h3 { color: #fff; font-size: 17px; font-family: CondBold; margin-bottom: 20px; margin-top: 25px; }
     #footer p { font-size: 14px; font-family: HelveticaLight; color: #fff; line-height: 20px; }
     #footer a { font-size: 14px; font-family: HelveticaLight; color: #fff; margin-bottom: 10px; display: inline-block; width: 100%; }
         #footer a:hover { font-family: Helvetica; }
     #footer ul.social { margin-top: 30px; }
-        #footer ul.social li { width: 50px; height: 50px; margin-bottom: 10px;}
+        #footer ul.social li { width: 50px; height: 50px; margin-bottom: 10px; }
             #footer ul.social li a { font-size: 30px; line-height: 50px; }
 
 
@@ -458,7 +458,7 @@ table.price-service { border: none; border-collapse: inherit; border-spacing: 2p
 }
 
 @media (max-width:641px) { /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */
-
+    .swiper-container { height: 200px !important; }
     #contact-5 { }
         #contact-5 h3 { }
         #contact-5 .contact-ul { }
@@ -515,6 +515,8 @@ table.price-service { border: none; border-collapse: inherit; border-spacing: 2p
 }
 /*xs*/
 @media screen and (max-width: 768px) {
+    .swiper-container { height: 230px !important; }
+
     .bar { display: block; padding-right: 10px; font-size: 20px; float: right; cursor: pointer; height: 55px; line-height: 55px; position: relative !important; }
     /*.bar .fa { background: url(../images/Front-End/menu.png) no-repeat scroll center center /20px; width: 20px; height: 20px; display: inline-block; }*/
 
@@ -554,6 +556,9 @@ table.price-service { border: none; border-collapse: inherit; border-spacing: 2p
 }
 
 @media screen and (max-width: 991px) {
+
+    .swiper-container { height: 250px; }
+
     .bar { height: auto; display: block; cursor: pointer; line-height: 40px; margin-right: 35px; margin-left: 10px; }
     /*.bar .fa { background: url(../images/Front-End/menu.png) no-repeat scroll center center /30px; width: 30px; height: 30px; display: inline-block; }*/
 

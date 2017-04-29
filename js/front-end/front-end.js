@@ -51,7 +51,7 @@
         nextButton: '.swiper-button-next',
         prevButton: '.swiper-button-prev',
         loop: true,
-        autoplay: 5000
+        //autoplay: 5000
     });
     var swiper2 = new Swiper('.tab-slide-m', {
         //pagination: '.swiper-pagination',

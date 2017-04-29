@@ -12,7 +12,7 @@
             <ul class="menu fll">
                 <li <%# getActive("/") %>><a href="/">Trang chủ</a></li>
                 <li class="">
-                    <a href="#">Công ty quân nam</a>
+                    <a href="/FrontEnd/Pages/Contact.aspx">Công ty quân nam</a>
                     <ul class="sub-menu">
                         <li><a href="/">Điểm đến du lịch</a></li>
                         <li><a href="/">PHIÊU LƯU & OFF THE BEATEN TRACK</a></li>
@@ -26,7 +26,7 @@
                 <li class=""><a href="#">dịch vụ</a></li>
                 <li class=""><a href="#">tin tức - sự kiện</a></li>
                 <li class=""><a href="#">Hỗ trợ khách hàng</a></li>
-                <li class=""><a href="/FrontEnd/Pages/Contact.aspx">Liên hệ</a></li>
+                <li class=""><a href="#">Liên hệ</a></li>
 
 
 
