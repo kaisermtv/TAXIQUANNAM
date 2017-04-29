@@ -12,6 +12,33 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MasterPageContent" runat="server">
 
+    <div id="slide-w">
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <a href="#">
+                        <img onerror="this.src='/images/Front-End/no-image-available.png';" src="/images/Front-End/slide-1.png" />
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="#">
+                        <img onerror="this.src='/images/Front-End/no-image-available.png';" src="/images/Front-End/slide-1.png" />
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="#">
+                        <img onerror="this.src='/images/Front-End/no-image-available.png';" src="/images/Front-End/slide-1.png" />
+                    </a>
+                </div>
+            </div>
+            <!-- Add Pagination -->
+            <div class="swiper-pagination"></div>
+            <!-- Add Arrows -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+    </div>
+
     <uc1:Banner runat="server" ID="Banner" />
     <uc1:Service runat="server" ID="Service" />
     <uc1:NewsSlide runat="server" ID="NewsSlide" />
