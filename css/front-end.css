@@ -115,7 +115,7 @@ ul.social { display: inline-block; float: right; }
 #slide-w { background: url(../images/Front-End/slide-w.png) no-repeat scroll center center; width: 100%; display: inline-block; float: left; position: relative; }
     #slide-w h3 { font-family: Amherst; font-size: 48px; color: #fff; line-height: 100px; display: inline-block; width: 450px; }
     #slide-w .line { border-bottom: 3px solid #c2c2c2; position: absolute; top: 55px; z-index: 9; display: inline-block; width: calc(100% - 460px); right: 0; }
-    #slide-w .swiper-slide img { width: 100%; }
+    #slide-w .swiper-slide img { width: 100%; height: 100%; }
 
 
 .PhotoContestPerson { font-size: 18px; background: #fff; width: 100%; margin-bottom: 20px; display: inline-block; }
@@ -130,7 +130,7 @@ ul.social { display: inline-block; float: right; }
 .swiper-pagination-bullet { width: 12px; height: 12px; opacity: 0.8; background: #fff; }
     .swiper-pagination-bullet.swiper-pagination-bullet-active { opacity: 1; background: #007aff; }
 
-.swiper-container { padding-bottom: 40px; width: 100%; height: 510px; }
+.swiper-container { width: 100%; height: 510px; }
 .swiper-slide { font-size: 18px; background: #fff; }
     .swiper-slide .person { width: 100%; height: 70%; margin-bottom: 10px; }
         .swiper-slide .person img { /*width: 100%; height: 100%;*/ }
@@ -223,18 +223,18 @@ ul.social { display: inline-block; float: right; }
     .main-header .m-header { display: inline-block; float: left; margin-right: 20px; }
         .main-header .m-header i { margin-right: 5px; }
 
-ul.lienhe { width: 355px; display: inline-block; }
+ul.lienhe { width: 355px; display: inline-block; max-width: 100%; }
     ul.lienhe li { display: inline-block; width: 100%; height: 50px; background: #f1f1f1; margin-bottom: 15px; line-height: 50px; font-size: 22px; font-family: CondBold; color: #bf3331; padding: 0 20px; }
         ul.lienhe li i { margin-right: 15px; color: #555; }
         ul.lienhe li span { float: right; display: inline-block; }
 
 #footer { background: #bf3331; padding-top: 30px; padding-bottom: 30px; border-bottom: 1px solid #e0e0e0; float: left; width: 100%; }
-    #footer h3 { color: #fff; font-size: 17px; font-family: CondBold; margin-bottom: 20px; }
+    #footer h3 { color: #fff; font-size: 17px; font-family: CondBold; margin-bottom: 20px; margin-top: 25px; }
     #footer p { font-size: 14px; font-family: HelveticaLight; color: #fff; line-height: 20px; }
     #footer a { font-size: 14px; font-family: HelveticaLight; color: #fff; margin-bottom: 10px; display: inline-block; width: 100%; }
         #footer a:hover { font-family: Helvetica; }
     #footer ul.social { margin-top: 30px; }
-        #footer ul.social li { width: 50px; height: 50px; }
+        #footer ul.social li { width: 50px; height: 50px; margin-bottom: 10px; }
             #footer ul.social li a { font-size: 30px; line-height: 50px; }
 
 
@@ -372,9 +372,10 @@ ul.lienhe { width: 355px; display: inline-block; }
         #service .srv-m:before { content: ""; position: absolute; border-right: 1px solid rgb(204, 204, 204); height: 95%; right: -15px; top: 0px; bottom: 0; margin: auto; }
 
 table.price-service-m { display: table; margin: auto; }
-table.price-service { border: none; border-collapse: inherit; border-spacing: 2px; }
+table.price-service { border: none; border-collapse: inherit; border-spacing: 2px; width: 100%; }
     table.price-service tr { }
-        table.price-service tr td { border: 1px solid #ada4a4; padding: 10px; text-transform: uppercase; width: 250px; font-size: 20px; }
+        table.price-service tr td { border: 1px solid #ada4a4; padding: 10px; text-transform: uppercase; width: 33.3333%; font-size: 20px; }
+            table.price-service tr td.op { font-size: 25px; }
         table.price-service tr:last-child td { font-size: 50px; }
 
 #copyright { background: #bf3331; float: left; width: 100%; }
@@ -389,19 +390,49 @@ table.price-service { border: none; border-collapse: inherit; border-spacing: 2p
 .ttd { display: inline-block; width: 100%; margin-bottom: 15px; }
     .ttd .sapo { margin-top: 0; }
 
-.contact-w { }
-    .contact-w p { line-height: 20px; font-size: 15px !important; font-family: Tahoma !important; color: #333333 !important; }
+.about-w { }
+    .about-w p { line-height: 20px; font-size: 15px !important; font-family: Tahoma !important; color: #333333 !important; }
 
 
+.wraper { display: inline-block; float: left; width: 100%; position: relative; }
 #newsslide { display: inline-block; float: left; width: 100%; margin-top: 20px; }
     #newsslide .title-main { font-size: 30px; margin-top: 45px; color: #bf3331; font-family: CondBold; text-transform: uppercase; }
 
-#taxi-contact { margin-bottom: 40px; display: inline-block; float: left; width: 100%; margin-top: 50px; }
-    #taxi-contact h3 { color: #746969; font-size: 25px; font-family: CondBold; margin-bottom: 30px; }
-    #taxi-contact .img-w { width: 125px; height: 100px; display: inline-block; }
-        #taxi-contact .img-w img { width: 100%; height: 100%; }
-    #taxi-contact .ts-r { display: inline-block; width: calc(100% - 135px); float: right; }
-        #taxi-contact .ts-r a { color: #746969; font-size: 16px; color: #746969; font-family: CondBold; }
+#taxi-about { margin-bottom: 40px; display: inline-block; float: left; width: 100%; margin-top: 50px; }
+    #taxi-about h3 { color: #746969; font-size: 25px; font-family: CondBold; margin-bottom: 30px; }
+    #taxi-about .img-w { width: 125px; height: 100px; display: inline-block; }
+        #taxi-about .img-w img { width: 100%; height: 100%; }
+    #taxi-about .ts-r { display: inline-block; width: calc(100% - 135px); float: right; }
+        #taxi-about .ts-r a { color: #746969; font-size: 16px; color: #746969; font-family: CondBold; }
+
+.about { }
+    .about h3 { font-size: 40px; text-transform: uppercase; color: #BF3331; text-align: center; font-family: CondBold; margin-top: 30px; }
+    .about .about-info { font-size: 20px; font-family: Helvetica; color: #bf3331; text-align: justify; line-height: 30px; }
+
+#about-1 { background: url(../images/Front-End/bg-1.png) no-repeat scroll center center/cover; height: 400px; }
+    #about-1 h3 { color: #fff; }
+    #about-1 img { display: block; margin: 60px auto; }
+#about-2 { background: url(../images/Front-End/bg-2.png) no-repeat scroll center center/cover; height: 500px; }
+    #about-2 h3 { text-align: left; margin: 67px 0 0; }
+    #about-2 .about-info { padding-bottom: 35px; padding-top: 35px; }
+        #about-2 .about-info:nth-last-child(2) { border-bottom: 1px solid #bf3331; }
+#about-3 { background: url(../images/Front-End/bg-3.png) no-repeat scroll center center/100% 100%; height: 500px; }
+    #about-3 h3 { color: #fff; text-align: left; margin: 67px 0 0; }
+    #about-3 .about-info { color: #fff; padding-bottom: 35px; padding-top: 35px; }
+
+#about-4 { background: #fff; height: 500px; }
+    #about-4 h3 { margin: 210px 0 0; }
+    #about-4 img { display: block; margin: 100px auto 0; }
+#about-5 { background: url(../images/Front-End/bg-4.png) no-repeat scroll center center/cover; height: 730px; }
+    #about-5 h3 { margin: 60px 0 40px; }
+    #about-5 .about-ul { }
+        #about-5 .about-ul li { display: inline-block; width: 100%; }
+            #about-5 .about-ul li .ct-1 { position: relative; display: inline-block; font-size: 60px; color: #01944b; font-family: CondBold; width: 270px; height: 140px; text-align: center; line-height: 140px; border-right: 2px solid #c6c4c4; }
+                #about-5 .about-ul li .ct-1:before { content: ""; position: absolute; margin: auto; background: #fbd83d; border-radius: 50%; display: block; width: 20px; height: 20px; top: 0px; bottom: 0px; right: -11px; z-index: 99; }
+            #about-5 .about-ul li:nth-child(even) .ct-1:before { background: #fbd83d; }
+            #about-5 .about-ul li:nth-child(odd) .ct-1:before { background: #01944b; }
+            #about-5 .about-ul li .ct-2 { display: inline-block; width: calc(100% - 280px); padding-left: 45px; font-size: 16px; font-family: Helvetica; height: 140px; float: right; padding-top: 50px; }
+                #about-5 .about-ul li .ct-2 .about-info { color: #555; }
 
 @media (min-width:320px) { /* smartphones, iPhone, portrait 480x320 phones */
 
@@ -415,6 +446,11 @@ table.price-service { border: none; border-collapse: inherit; border-spacing: 2p
     #news > .lst-news li .img-w { width: 100%; height: auto; }
         #news > .lst-news li .img-w img { width: 100%; position: relative; }
     #news > .lst-news li .lst-news-detail { width: 100%; margin-left: 0; }
+
+    .about h3 { font-size: 19px !important; }
+
+    #footer ul.social li { width: 30px; height: 30px; margin-bottom: 10px; }
+        #footer ul.social li a { font-size: 20px; line-height: 30px; }
 }
 
 @media (max-width:481px) { /* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */
@@ -427,7 +463,41 @@ table.price-service { border: none; border-collapse: inherit; border-spacing: 2p
 }
 
 @media (max-width:641px) { /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */
+    .swiper-container { height: 200px !important; }
+    #about-5 { }
+        #about-5 h3 { }
+        #about-5 .about-ul { }
+            #about-5 .about-ul li { margin-bottom: 10px; }
+                #about-5 .about-ul li .ct-1 { float: left; margin-right: 5px; font-size: 23px !important; width: auto !important; height: auto !important; line-height: inherit !important; border-right: 1px solid #e1e1e1 !important; padding-right: 10px; }
+                    #about-5 .about-ul li .ct-1:before { display: none; }
+                #about-5 .about-ul li:nth-child(2) .ct-1:before { }
+                #about-5 .about-ul li .ct-2 { display: inline !important; width: auto !important; padding-left: 0 !important; float: none !important; padding-top: 0px !important; font-size: 14px !important; height: auto !important; }
+                    #about-5 .about-ul li .ct-2 .about-info { }
 
+
+
+    table.price-service-m { }
+    table.price-service { }
+        table.price-service tr { }
+            table.price-service tr td { font-size: 15px; padding: 5px; }
+                table.price-service tr td.op { font-size: 17px; }
+            table.price-service tr:last-child td { font-size: 17px; }
+
+    #banner h3 { font-size: 20px; margin-top: 20px; margin-bottom: 20px; }
+
+    #service h3 { margin-bottom: 0; font-size: 20px; margin-top: 20px; color: #bf3331; font-family: CondBold; }
+    #service .srv-m { position: relative; height: auto; padding: 10px 15px; border-bottom: 1px solid #ccc; }
+        #service .srv-m .img-w { display: block; margin: 0px auto; height: 70px; }
+        #service .srv-m h3 { font-size: 18px; color: #746969; margin-top: 10px; }
+        #service .srv-m p { line-height: 20px; font-size: 15px; color: #746969; font-family: HelveticaLight; text-align: center; margin-bottom: 10px; }
+
+    #newsslide .title-main { font-size: 20px; margin-top: 20px; color: #bf3331; font-family: CondBold; text-transform: uppercase; margin-bottom: 10px; }
+
+    #taxi-about { margin-bottom: 10px; display: inline-block; float: left; width: 100%; margin-top: 0px; }
+        #taxi-about h3 { color: #746969; font-size: 20px; font-family: CondBold; margin-bottom: 15px; }
+
+    ul.lienhe { width: 100%; display: inline-block; max-width: 100%; }
+        ul.lienhe li { display: inline-block; width: 100%; height: 40px; background: #f1f1f1; margin-bottom: 10px; line-height: 40px; font-size: 19px; font-family: CondBold; color: #bf3331; padding: 0 20px; }
 }
 
 @media (min-width:641px) { /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */
@@ -475,8 +545,36 @@ table.price-service { border: none; border-collapse: inherit; border-spacing: 2p
 }
 /*xs*/
 @media screen and (max-width: 768px) {
+    #banner { height: auto; padding-bottom: 10px; }
+
+    .swiper-container { height: 200px !important; }
+
     .bar { display: block; padding-right: 10px; font-size: 20px; float: right; cursor: pointer; height: 55px; line-height: 55px; position: relative !important; }
     /*.bar .fa { background: url(../images/Front-End/menu.png) no-repeat scroll center center /20px; width: 20px; height: 20px; display: inline-block; }*/
+
+    .about h3 { font-size: 30px; }
+    .about .about-info { font-size: 16px; }
+
+    #about-1 { height: 250px; }
+        #about-1 img { margin: 30px auto; }
+
+    #about-2 { height: 300px; }
+        #about-2 h3 { margin: 25px 0 0; }
+        #about-2 .about-info { padding-bottom: 15px; padding-top: 15px; line-height: 20px; }
+    #about-3 { height: 270px; }
+        #about-3 h3 { margin: 25px 0 0; }
+        #about-3 .about-info { color: #fff; padding-bottom: 15px; padding-top: 15px; }
+
+    #about-4 { height: 350px; }
+        #about-4 img { display: block; margin: 35px auto 0; }
+
+    #about-5 { height: auto; padding-bottom: 20px; }
+        #about-5 h3 { margin: 30px 0 20px; }
+        #about-5 .about-ul li .ct-1 { position: relative; display: inline-block; font-size: 40px; color: #01944b; font-family: CondBold; width: 115px; height: 90px; text-align: center; line-height: 90px; border-right: 2px solid #c6c4c4; }
+        #about-5 .about-ul li .ct-2 { display: inline-block; width: calc(100% - 115px); padding-left: 25px; font-size: 14px; font-family: Helvetica; height: auto; float: right; padding-top: 0px; }
+            #about-5 .about-ul li .ct-2 .about-info { font-size: 14px; }
+
+    #banner p { font-size: 14px; }
 }
 /*sm*/
 @media screen and (min-width: 769px) {
@@ -492,6 +590,9 @@ table.price-service { border: none; border-collapse: inherit; border-spacing: 2p
 }
 
 @media screen and (max-width: 991px) {
+
+    .swiper-container { height: 250px; }
+
     .bar { height: auto; display: block; cursor: pointer; line-height: 40px; margin-right: 35px; margin-left: 10px; }
     /*.bar .fa { background: url(../images/Front-End/menu.png) no-repeat scroll center center /30px; width: 30px; height: 30px; display: inline-block; }*/
 
@@ -546,6 +647,8 @@ table.price-service { border: none; border-collapse: inherit; border-spacing: 2p
     #service .srv-w:nth-child(2n) .srv-m:before { display: none; }
     #service .srv-w:nth-last-child(1) .srv-m { border-bottom: none; }
     #service .srv-w:nth-last-child(2) .srv-m { border-bottom: none; }
+
+    #about-4 h3 { margin-top: 30px; }
 }
 
 @media screen and (min-width: 992px) {

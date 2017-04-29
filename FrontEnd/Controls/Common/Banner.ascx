@@ -14,7 +14,7 @@
                             <tbody>
                                 <tr>
                                     <td style="visibility: hidden;"></td>
-                                    <td style="font-size: 25px;">Bảng giá dịch vụ</td>
+                                    <td class="op">Bảng giá dịch vụ</td>
                                     <td style="visibility: hidden;"></td>
                                 </tr>
                                 <tr>

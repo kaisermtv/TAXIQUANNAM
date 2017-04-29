@@ -44,7 +44,7 @@
     <uc1:NewsSlide runat="server" ID="NewsSlide" />
 
 
-    <div id="taxi-contact">
+    <div id="taxi-about">
         <div class="main">
             <div class="container-fluid">
                 <div class="row">
