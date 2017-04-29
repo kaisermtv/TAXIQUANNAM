@@ -14,11 +14,10 @@
                 <li class="">
                     <a href="/FrontEnd/Pages/About.aspx">Công ty quân nam</a>
                     <ul class="sub-menu">
-                        <li><a href="/">Sứ mệnh</a></li>
-                        <li><a href="/">Tầm nhìn</a></li>
-                        <li><a href="/">DU LỊCH PHONG CÁCH</a></li>
-                        <li><a href="/">Giá trị cốt lõi</a></li>
-                        <li><a href="/">Lịch sử hình thành</a></li>
+                        <li><a href="/FrontEnd/Pages/About.aspx#about-2">Sứ mệnh</a></li>
+                        <li><a href="/FrontEnd/Pages/About.aspx#about-3">Tầm nhìn</a></li>
+                        <li><a href="/FrontEnd/Pages/About.aspx#about-4">Giá trị cốt lõi</a></li>
+                        <li><a href="/FrontEnd/Pages/About.aspx#about-5">Lịch sử hình thành</a></li>
                     </ul>
                 </li>
                 <li class=""><a href="#">dịch vụ</a></li>
