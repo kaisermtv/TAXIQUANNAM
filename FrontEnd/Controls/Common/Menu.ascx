@@ -12,15 +12,13 @@
             <ul class="menu fll">
                 <li <%# getActive("/") %>><a href="/">Trang chủ</a></li>
                 <li class="">
-                    <a href="/FrontEnd/Pages/Contact.aspx">Công ty quân nam</a>
+                    <a href="/FrontEnd/Pages/About.aspx">Công ty quân nam</a>
                     <ul class="sub-menu">
-                        <li><a href="/">Điểm đến du lịch</a></li>
-                        <li><a href="/">PHIÊU LƯU & OFF THE BEATEN TRACK</a></li>
+                        <li><a href="/">Sứ mệnh</a></li>
+                        <li><a href="/">Tầm nhìn</a></li>
                         <li><a href="/">DU LỊCH PHONG CÁCH</a></li>
-                        <li><a href="/">CUỘC SỐNG ĐỊA PHƯƠNG</a></li>
-                        <li><a href="/">LUXURY & HONEYMOON</a></li>
-                        <li><a href="/">DU LỊCH BIỂN</a></li>
-                        <li><a href="/">DU LỊCH TRÊN BIỂN</a></li>
+                        <li><a href="/">Giá trị cốt lõi</a></li>
+                        <li><a href="/">Lịch sử hình thành</a></li>
                     </ul>
                 </li>
                 <li class=""><a href="#">dịch vụ</a></li>
