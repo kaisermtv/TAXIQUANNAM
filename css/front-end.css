@@ -229,12 +229,12 @@ ul.lienhe { width: 355px; display: inline-block; }
         ul.lienhe li span { float: right; display: inline-block; }
 
 #footer { background: #bf3331; padding-top: 30px; padding-bottom: 30px; border-bottom: 1px solid #e0e0e0; float: left; width: 100%; }
-    #footer h3 { color: #fff; font-size: 17px; font-family: CondBold; margin-bottom: 20px; }
+    #footer h3 { color: #fff; font-size: 17px; font-family: CondBold; margin-bottom: 20px; margin-top: 25px;}
     #footer p { font-size: 14px; font-family: HelveticaLight; color: #fff; line-height: 20px; }
     #footer a { font-size: 14px; font-family: HelveticaLight; color: #fff; margin-bottom: 10px; display: inline-block; width: 100%; }
         #footer a:hover { font-family: Helvetica; }
     #footer ul.social { margin-top: 30px; }
-        #footer ul.social li { width: 50px; height: 50px; }
+        #footer ul.social li { width: 50px; height: 50px; margin-bottom: 10px;}
             #footer ul.social li a { font-size: 30px; line-height: 50px; }
 
 
@@ -393,6 +393,7 @@ table.price-service { border: none; border-collapse: inherit; border-spacing: 2p
     .contact-w p { line-height: 20px; font-size: 15px !important; font-family: Tahoma !important; color: #333333 !important; }
 
 
+.wraper { display: inline-block; float: left; width: 100%; position: relative; }
 #newsslide { display: inline-block; float: left; width: 100%; margin-top: 20px; }
     #newsslide .title-main { font-size: 30px; margin-top: 45px; color: #bf3331; font-family: CondBold; text-transform: uppercase; }
 
@@ -402,6 +403,34 @@ table.price-service { border: none; border-collapse: inherit; border-spacing: 2p
         #taxi-contact .img-w img { width: 100%; height: 100%; }
     #taxi-contact .ts-r { display: inline-block; width: calc(100% - 135px); float: right; }
         #taxi-contact .ts-r a { color: #746969; font-size: 16px; color: #746969; font-family: CondBold; }
+
+.contact { }
+    .contact h3 { font-size: 40px; text-transform: uppercase; color: #BF3331; text-align: center; font-family: CondBold; margin-top: 30px; }
+    .contact .contact-info { font-size: 20px; font-family: Helvetica; color: #bf3331; text-align: justify; line-height: 30px; }
+
+#contact-1 { background: url(../images/Front-End/bg-1.png) no-repeat scroll center center/cover; height: 400px; }
+    #contact-1 h3 { color: #fff; }
+    #contact-1 img { display: block; margin: 60px auto; }
+#contact-2 { background: url(../images/Front-End/bg-2.png) no-repeat scroll center center/cover; height: 500px; }
+    #contact-2 h3 { text-align: left; margin: 67px 0 0; }
+    #contact-2 .contact-info { padding-bottom: 35px; padding-top: 35px; }
+        #contact-2 .contact-info:nth-last-child(2) { border-bottom: 1px solid #bf3331; }
+#contact-3 { background: url(../images/Front-End/bg-3.png) no-repeat scroll center center/100% 100%; height: 500px; }
+    #contact-3 h3 { color: #fff; text-align: left; margin: 67px 0 0; }
+    #contact-3 .contact-info { color: #fff; padding-bottom: 35px; padding-top: 35px; }
+
+#contact-4 { background: #fff; height: 500px; }
+    #contact-4 h3 { margin: 210px 0 0; }
+    #contact-4 img { display: block; margin: 100px auto 0; }
+#contact-5 { background: url(../images/Front-End/bg-4.png) no-repeat scroll center center/cover; height: 730px; }
+    #contact-5 h3 { margin: 60px 0 40px; }
+    #contact-5 .contact-ul { }
+        #contact-5 .contact-ul li { display: inline-block; width: 100%; }
+            #contact-5 .contact-ul li .ct-1 { position: relative; display: inline-block; font-size: 60px; color: #01944b; font-family: CondBold; width: 270px; height: 140px; text-align: center; line-height: 140px; border-right: 2px solid #c6c4c4; }
+                #contact-5 .contact-ul li .ct-1:before { content: ""; position: absolute; margin: auto; background: #fbd83d; border-radius: 50%; display: block; width: 20px; height: 20px; top: 0px; bottom: 0px; right: -11px; z-index: 99; }
+            #contact-5 .contact-ul li:nth-child(2) .ct-1:before { background: #01944b; }
+            #contact-5 .contact-ul li .ct-2 { display: inline-block; width: calc(100% - 280px); padding-left: 45px; font-size: 16px; font-family: Helvetica; height: 140px; float: right; padding-top: 50px; }
+                #contact-5 .contact-ul li .ct-2 .contact-info { color: #555; }
 
 @media (min-width:320px) { /* smartphones, iPhone, portrait 480x320 phones */
 
@@ -415,6 +444,8 @@ table.price-service { border: none; border-collapse: inherit; border-spacing: 2p
     #news > .lst-news li .img-w { width: 100%; height: auto; }
         #news > .lst-news li .img-w img { width: 100%; position: relative; }
     #news > .lst-news li .lst-news-detail { width: 100%; margin-left: 0; }
+
+    .contact h3 { font-size: 19px !important; }
 }
 
 @media (max-width:481px) { /* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */
@@ -428,6 +459,15 @@ table.price-service { border: none; border-collapse: inherit; border-spacing: 2p
 
 @media (max-width:641px) { /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */
 
+    #contact-5 { }
+        #contact-5 h3 { }
+        #contact-5 .contact-ul { }
+            #contact-5 .contact-ul li { margin-bottom: 10px; }
+                #contact-5 .contact-ul li .ct-1 { float: left; margin-right: 5px; font-size: 23px !important; width: auto !important; height: auto !important; line-height: inherit !important; border-right: 1px solid #e1e1e1 !important; padding-right: 10px; }
+                    #contact-5 .contact-ul li .ct-1:before { display: none; }
+                #contact-5 .contact-ul li:nth-child(2) .ct-1:before { }
+                #contact-5 .contact-ul li .ct-2 { display: inline !important; width: auto !important; padding-left: 0 !important; float: none !important; padding-top: 0px !important; font-size: 14px !important; height: auto !important; }
+                    #contact-5 .contact-ul li .ct-2 .contact-info { }
 }
 
 @media (min-width:641px) { /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */
@@ -477,6 +517,28 @@ table.price-service { border: none; border-collapse: inherit; border-spacing: 2p
 @media screen and (max-width: 768px) {
     .bar { display: block; padding-right: 10px; font-size: 20px; float: right; cursor: pointer; height: 55px; line-height: 55px; position: relative !important; }
     /*.bar .fa { background: url(../images/Front-End/menu.png) no-repeat scroll center center /20px; width: 20px; height: 20px; display: inline-block; }*/
+
+    .contact h3 { font-size: 30px; }
+    .contact .contact-info { font-size: 16px; }
+
+    #contact-1 { height: 250px; }
+        #contact-1 img { margin: 30px auto; }
+
+    #contact-2 { height: 300px; }
+        #contact-2 h3 { margin: 25px 0 0; }
+        #contact-2 .contact-info { padding-bottom: 15px; padding-top: 15px; line-height: 20px; }
+    #contact-3 { height: 270px; }
+        #contact-3 h3 { margin: 25px 0 0; }
+        #contact-3 .contact-info { color: #fff; padding-bottom: 15px; padding-top: 15px; }
+
+    #contact-4 { height: 350px; }
+        #contact-4 img { display: block; margin: 35px auto 0; }
+
+    #contact-5 { height: auto; padding-bottom: 20px; }
+        #contact-5 h3 { margin: 30px 0 20px; }
+        #contact-5 .contact-ul li .ct-1 { position: relative; display: inline-block; font-size: 40px; color: #01944b; font-family: CondBold; width: 115px; height: 90px; text-align: center; line-height: 90px; border-right: 2px solid #c6c4c4; }
+        #contact-5 .contact-ul li .ct-2 { display: inline-block; width: calc(100% - 115px); padding-left: 25px; font-size: 14px; font-family: Helvetica; height: auto; float: right; padding-top: 0px; }
+            #contact-5 .contact-ul li .ct-2 .contact-info { font-size: 14px; }
 }
 /*sm*/
 @media screen and (min-width: 769px) {
@@ -546,6 +608,8 @@ table.price-service { border: none; border-collapse: inherit; border-spacing: 2p
     #service .srv-w:nth-child(2n) .srv-m:before { display: none; }
     #service .srv-w:nth-last-child(1) .srv-m { border-bottom: none; }
     #service .srv-w:nth-last-child(2) .srv-m { border-bottom: none; }
+
+    #contact-4 h3 { margin-top: 30px; }
 }
 
 @media screen and (min-width: 992px) {

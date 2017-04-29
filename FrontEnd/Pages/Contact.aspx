@@ -4,48 +4,95 @@
 
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MasterPageContent" runat="server">
-
-    <div class="container-fluid">
-        <div class="row">
-            <div class="main contact-w">
-                <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
-                    <div class="BodyTitle">
-                        LIÊN HỆ
-           
+    <div class="wraper contact" id="contact-1">
+        <div class="main">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                        <img src="/images/Front-End/logo.png" alt="" />
+                        <h3>uy tín - chất lượng - trường tồn</h3>
                     </div>
-                    <br />
-                    <p>
-                        Các tổ chức, cá nhân cần liên hệ với <%= this.getValue("Name") %>, vui lòng liên hệ với chúng tôi theo các thông tin sau:
-                    </p>
-                    <br />
-                    <p style="font-weight: bold; font-size: 15px;"><%= this.getValue("Name") %></p>
-                    <p style="font-size: 13.5px;">Địa chỉ: <%= this.getValue("Address") %></p>
-                    <p style="font-size: 13.5px;">Điện thoại: <%= this.getValue("Phone") %></p>
-                    <p style="font-size: 13.5px;">Email: <%= this.getValue("Email") %></p>
-                    <p style="font-size: 13.5px;">Hotline: <%= this.getValue("Hotline") %></p>
-                    <br />
-                    <p style="margin-top: -5px;">
-                        Hoặc gửi thông tin liên hệ trực tiếp về cho chúng tôi theo mẫu sau đây: 
-                    </p>
-                    <br />
-                    <div id="MainContent_UpdatePanel">
-                        <form method="post">
-                            <div class="">
-                                <input name="name" class="form-control" placeholder="Họ và tên" type="text" />
-                                <input name="email" class="form-control" placeholder="Địa chỉ email" type="email" />
-                                <input name="title" class="form-control" placeholder="Tiêu đề" type="text" />
-                                <textarea name="noidung" class="form-control" placeholder="Nội dung liên hệ" rows="6"></textarea>
-                                <div class="input-group">
-                                    <input type="submit" value="Gửi câu hỏi" class="aspNetDisabled btn btn-default" style="width: 100px;" />
-                                    <span id="lblMsg" style="color: Red;"><%=msg %></span>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                    <br />
                 </div>
-                <div class="hidden-xs hidden-sm col-md-4 col-lg-4" style="margin-top: 20px;">
-                    <uc1:QuangCao runat="server" ID="QuangCao" />
+            </div>
+        </div>
+    </div>
+    <div class="wraper contact" id="contact-2">
+        <div class="main">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-5 col-lg-5">
+                    </div>
+                    <div class="col-xs-12 col-sm-12 col-md-7 col-lg-7">
+                        <h3>Sứ mệnh</h3>
+                        <div class="contact-info">Sứ mệnh của công ty là một khái niệm dùng để xác định các mục đích của công ty, những lý do công ty đó ra đời và căn cứ tồn tại, phát triển của nó</div>
+                        <div class="contact-info">Sứ mệnh của công ty chính là bản tuyên ngôn của công ty đó đối với xã hội, nó chứng minh tính hữu ích và các ý nghĩa trong sự tồn tại của công ty đối với xã hội</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="wraper contact" id="contact-3">
+        <div class="main">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                    </div>
+                    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                        <h3>Tầm nhìn</h3>
+                        <div class="contact-info">Tầm nhìn là một hình ảnh, tiêu chuẩn, hình tượng độc đáo và lý tưởng trong tương lai, là những điều doanh nghiệp muốn đạt tới hoặc trở thành.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="wraper contact" id="contact-4">
+        <div class="main">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                        <h3>Giá trị cốt lõi</h3>
+                    </div>
+                    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                        <img src="/images/Front-End/giatricotloi.png" alt="" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="wraper contact" id="contact-5">
+        <div class="main">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                        <h3>Lịch sử phát triển</h3>
+                        <ul class="contact-ul">
+                            <li>
+                                <div class="ct-1">
+                                    2017
+                                </div>
+                                <div class="ct-2">
+                                    <div class="contact-info">Thành lập từ năm 1993, CMC đã trải qua gần 20 năm xây dựng, phát triển và mở rộng để trở thành một trong những công ty CNTT-VT lớn mạnh hàng đầu Việt Nam với gần 2.000 nhân viên.</div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="ct-1">
+                                    2012
+                                </div>
+                                <div class="ct-2">
+                                     <div class="contact-info">Thành lập từ năm 1993, CMC đã trải qua gần 20 năm xây dựng, phát triển và mở rộng để trở thành một trong những công ty CNTT-VT lớn mạnh hàng đầu Việt Nam với gần 2.000 nhân viên.</div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="ct-1">
+                                    2009
+                                </div>
+                                <div class="ct-2">
+                                     <div class="contact-info">Thành lập từ năm 1993, CMC đã trải qua gần 20 năm xây dựng, phát triển và mở rộng để trở thành một trong những công ty CNTT-VT lớn mạnh hàng đầu Việt Nam với gần 2.000 nhân viên.</div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
                 </div>
             </div>
         </div>

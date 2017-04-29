@@ -26,7 +26,7 @@
                 <li class=""><a href="#">dịch vụ</a></li>
                 <li class=""><a href="#">tin tức - sự kiện</a></li>
                 <li class=""><a href="#">Hỗ trợ khách hàng</a></li>
-                <li class=""><a href="#">Liên hệ</a></li>
+                <li class=""><a href="/FrontEnd/Pages/Contact.aspx">Liên hệ</a></li>
 
 
 
