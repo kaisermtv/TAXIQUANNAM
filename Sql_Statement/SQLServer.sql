@@ -10,6 +10,7 @@ CREATE TABLE dbo.tblStatus(
 INSERT INTO dbo.tblStatus(NAME,[DESCRIBE]) VALUES (N'-/-',N'Chờ xử lý');
 INSERT INTO dbo.tblStatus(NAME,[DESCRIBE]) VALUES (N'Kích hoạt',N'Được chia sẻ');
 INSERT INTO dbo.tblStatus(NAME,[DESCRIBE]) VALUES (N'Lưu trữ',N'Đã xóa, nhưng chưa chả khỏi sql');
+INSERT INTO dbo.tblStatus(NAME,[DESCRIBE]) VALUES (N'Ẩn danh mục',N'Sẽ không hiển thị trong danh mục');
 
 
 CREATE TABLE dbo.tblAcctGroup(
