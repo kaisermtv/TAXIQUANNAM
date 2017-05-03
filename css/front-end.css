@@ -405,15 +405,28 @@ table.price-service { border: none; border-collapse: inherit; border-spacing: 2p
     #taxi-about .ts-r { display: inline-block; width: calc(100% - 135px); float: right; }
         #taxi-about .ts-r a { color: #746969; font-size: 20px; color: #746969; font-family: CondBold; }
 
-.about { }
+.transition-all { -moz-transition: all 1s ease-in-out; -o-transition: all 1s ease-in-out; -webkit-transition: all 1s ease-in-out; transition: all 1s ease-in-out; }
+.transition-delay-1s { -moz-transition-delay: 1s; -o-transition-delay: 1s; -webkit-transition-delay: 1s; transition-delay: 1s; }
+.transition-delay-2s { -moz-transition-delay: 2s; -o-transition-delay: 2s; -webkit-transition-delay: 2s; transition-delay: 2s; }
+
+
+.animation-right { right: -150%; position: absolute; width: 100%; }
+    .animation-right.active { right: 0; }
+.animation-left { left: -150%; position: absolute; width: 100%; }
+    .animation-left.active { left: 0; }
+.animation-zoom { -moz-transform: scale(0); -ms-transform: scale(0); -o-transform: scale(0); -webkit-transform: scale(0); transform: scale(0); }
+    .animation-zoom.active { -moz-transform: scale(1); -ms-transform: scale(1); -o-transform: scale(1); -webkit-transform: scale(1); transform: scale(1); }
+
+.about-wraper { -moz-transition: all 0.5s ease-in-out; -o-transition: all 0.5s ease-in-out; -webkit-transition: all 0.5s ease-in-out; transition: all 0.5s ease-in-out; opacity: 0; }
+.about { overflow: hidden; }
     .about h3 { font-size: 40px; text-transform: uppercase; color: #BF3331; text-align: center; font-family: CondBold; margin-top: 30px; }
     .about .about-info { font-size: 20px; font-family: Helvetica; color: #bf3331; text-align: justify; line-height: 30px; }
 
-#about-1 { background: url(../images/Front-End/bg-1.png) no-repeat scroll center center/cover; height: 400px; }
+#about-1 { background: url(../images/Front-End/bg-1.png) no-repeat scroll center center/cover; height: 510px; }
     #about-1 h3 { color: #fff; }
     #about-1 img { display: block; margin: 60px auto; }
 #about-2 { background: url(../images/Front-End/bg-2.png) no-repeat scroll center center/cover; height: 500px; }
-    #about-2 h3 { text-align: left; margin: 67px 0 0; }
+    #about-2 h3 { text-align: left; margin: 95px 0 0; }
     #about-2 .about-info { padding-bottom: 35px; padding-top: 35px; }
         #about-2 .about-info:nth-last-child(2) { border-bottom: 1px solid #bf3331; }
 #about-3 { background: url(../images/Front-End/bg-3.png) no-repeat scroll center center/100% 100%; height: 500px; }
@@ -603,24 +616,30 @@ table.price-service { border: none; border-collapse: inherit; border-spacing: 2p
         .login-w .user { display: none; }
         .login-w .login-ul li a { padding: 0 5px; }
 
-    #menu-wraper { display: none; position: absolute; background: #fff; width: 100%; float: left; margin-bottom: 10px; z-index: 9999; top: 40px; left: 0; border-left: 1px solid #e1e1e1; border-right: 1px solid #e1e1e1; }
+    #menu-wraper { position: absolute; background: #fff; top: 40px; width: 100%; z-index: 9999; box-shadow: 0px 3px 10px 0px #676161; }
         #menu-wraper .menu { display: inline-block; width: 100%; }
-            #menu-wraper .menu > li { position: relative; font-weight: 700; text-transform: uppercase; font-family: Myriad Pro; font-size: 14px; }
-                #menu-wraper .menu > li a { color: #282828; line-height: 30px; border-bottom: 1px solid #ddd; display: inline-block; width: 100%; padding-left: 10px; }
-                #menu-wraper .menu > li .sub-menu { padding-left: 20px; transition: height 0.4s ease-in-out; height: 0; overflow: hidden; }
-                    #menu-wraper .menu > li .sub-menu > li { }
-                        #menu-wraper .menu > li .sub-menu > li a { }
-                        #menu-wraper .menu > li .sub-menu > li:hover a { }
+            #menu-wraper .menu > li { position: relative; font-weight: 700; text-transform: uppercase; font-family: Myriad Pro; font-size: 14px; border-bottom: 1px solid #ddd; display: inline-block; width: 100%; }
+                #menu-wraper .menu > li a { color: #282828; line-height: 30px; padding-left: 10px; }
+                #menu-wraper .menu > li .sub-menu { transition: max-height 0.4s ease-in-out; max-height: 0; overflow: hidden; }
+                    #menu-wraper .menu > li .sub-menu > li { padding-left: 20px; }
+                        #menu-wraper .menu > li .sub-menu > li a { color: #000; display: inline-block; width: 100%; }
+                        #menu-wraper .menu > li .sub-menu > li:hover { background: #bf3331; }
+                            #menu-wraper .menu > li .sub-menu > li:hover a { color: #fff; }
+                        #menu-wraper .menu > li .sub-menu > li.head-sub { }
 
-                #menu-wraper .menu > li.active, #menu-wraper .menu > li:hover { }
-                    #menu-wraper .menu > li.active a, #menu-wraper .menu > li a:hover { color: #fff; background: #BF3331; }
-                #menu-wraper .menu > li .sub-menu.active { height: 220px; }
+
+                #menu-wraper .menu > li.active, #menu-wraper .menu > li:hover { background: #bf3331; color: #fff; }
+                    #menu-wraper .menu > li.active a, #menu-wraper .menu > li a:hover { color: #fff; }
+                #menu-wraper .menu > li.expand .sub-menu { max-height: 500px; background: #fff; }
+                    #menu-wraper .menu > li.expand .sub-menu a { color: #000; }
                 #menu-wraper .menu > li.active i { color: #ffffff !important; }
-            #menu-wraper .menu:last-child > li a { }
+            #menu-wraper .menu:last-child > li a { color: #000; }
+            #menu-wraper .menu:last-child > li.active a { color: #fff; }
+            #menu-wraper .menu:last-child > li:hover > a { color: #fff; }
 
-        #menu-wraper.active { display: block; }
-        #menu-wraper #bar-menu { }
-        #menu-wraper.active #bar-menu { }
+
+        #menu-wraper #bar-menu { position: relative; display: none; }
+        #menu-wraper.active #bar-menu { display: block; }
 
     #news { padding-top: 25px; padding-bottom: 25px; }
         #news > h3 { font-size: 27px; width: 155px; }

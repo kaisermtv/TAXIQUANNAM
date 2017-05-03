@@ -11,7 +11,7 @@
         <div id="bar-menu">
             <ul class="menu fll">
                 <li <%# getActive("/") %>><a href="/">Trang chủ</a></li>
-                <li class="">
+                <li class="head-sub">
                     <a href="/FrontEnd/Pages/About.aspx">Công ty quân nam</a>
                     <ul class="sub-menu">
                         <li><a href="/FrontEnd/Pages/About.aspx#about-2">Sứ mệnh</a></li>
